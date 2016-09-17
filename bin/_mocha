@@ -338,7 +338,8 @@ args.forEach(function(arg){
   files = files.concat(newFiles);
 });
 
-if (files.length === 0) {
+if (!files.length) {
+  console.error('No test files found');
   process.exit(1);
 }
 
